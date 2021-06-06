@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Libraries -->
+    <script src="lib/p5.js"></script>
+<!--    <script src="lib/p5.min.js"></script>-->
+    <script src="lib/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+    <script type='text/javascript' src='lib/p5.dom.min.js'></script>
+    <script src="lib/quicksettings.js"></script>
+    <script src="lib/dat.gui.js"></script>
+    <script src="lib/p5.gui.js"></script>
+    
+
+    <!-- Main sketch file -->
+    <script src="sketch.js"></script>
+    
+    <!-- Js files -->
+    <script src="toolbox.js"></script>
+<!--    <script src="colourPalette.js"></script>-->
+    <script src="helperFunctions.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="eraser.js"></script>
+	<script src="brushes/freehandTool.js"></script>
+    <script src="brushes/paintbrush.js"></script>
+    <script src="brushes/highlighterBrush.js"></script>
+    <script src="shapes/lineToTool.js"></script>
+	<script src="shapes/rectTool.js"></script>
+	<script src="shapes/ellipseTool.js"></script>
+	<script src="shapes/triangleTool.js"></script>
+	<script src="stampTool.js"></script>
+    <script src="paintBucket.js"></script>
+	<script src="blurTool.js"></script>  
+	<script src="move.js"></script>
+	  
+<!--	Still in progress-->
+	<script src="textTool.js"></script>
+	<script src="brushes/crayonBrush.js"></script>
+
+    <!-- CSS stylesheets -->
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+	
+  <body>
+	<!--Wrapper holds entire canvas together-->
+  	<div class="wrapper">
+		<!--Top header, contains the logo and dropdown button-->
+		<div class="box header">
+			<img src="assets/logo.png" alt="logo" class = "logoimg">
+            	<div class="dropdown"> 
+					<button class="dropbtn">File</button>  
+						<div class="dropdown-content">
+							<!--New and save image code can be found in helper functions.js file-->
+							<a id="clearButton">New</a>
+							<a id="saveImageButton">Save Image</a>
+                    </div>
+				</div>	  
+			</div>
+        
+		<!--Side bar on left of screen with tools-->
+        <div class = "sidebarpreview">
+            <div class="box sidebar visible"></div>
+				<!--            <button id="forExtraTools2" class = "sidebarbutton">Online version</button>-->
+        </div>
+		
+		<!--Side bar on the right of screen; contains the extra tools-->
+		<div class = "box extrasidebar visible" id="mydiv">
+            <div class="box colourPalette hidden" id="mydivheader" ></div>
+            	<div class="box options" id="mydivheader">
+					<div class= "choice"></div> </div>
+						<div class="box options" id="slider"></div>
+							<!--For now, you can close the side bar; will add code so that you can open it again once closed-->
+            			<div class="alert-close">×</div>
+					</div>
+		
+		<!--canvas for drawing-->
+        <div id="content"></div>
+      </div>	  
+  </body>
+</html>

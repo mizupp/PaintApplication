@@ -1,0 +1,274 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#content {
+	grid-area: content;
+	width: 80%;
+	height: 100%;
+
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+
+}
+
+
+.footer{
+  grid-area: footer;
+}
+
+.sidebarpreview{
+	position: absolute;
+	top: 10%;	
+}
+
+.sidebar {
+	grid-area: sidebar;
+	overflow-y: hidden;
+    border-radius: 30px;
+    border: 2px solid;
+}
+
+
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:8px;
+    border-radius: 100px;
+    border: 0px solid;
+}
+
+.sideBarItem img{
+	max-height: 40px;
+	max-Width:40px;
+	border-radius: 50px;
+    border: 2px solid;
+}
+
+.sideBarItem img:hover{
+	border-radius: 50px;
+    border: 2px black solid;
+    transition: 0.1s ease-in-out;
+
+}
+
+.sideBarItem img:active{
+	border-radius: 50px;
+    border: 2px #ec507f solid;
+}
+
+
+
+.sideBar2Item{
+	max-height: 50px;
+	max-width: 50px;
+	padding:7px;
+}
+
+.sideBar2Item img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+
+/*
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+	position: relative;
+*/
+	top: 50px;
+	
+	
+}
+
+.options{
+	grid-area: options;
+	padding: 20px;
+	position: absolute;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.choice{
+position: absolute;
+	margin: 10px;
+}
+/*
+.colourSwatches{
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+*/
+.choice img{
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	max-height: 80px;
+	max-width: 80px;
+	margin: 5px;
+	    border-radius: 30px;
+    border: 2px solid;/
+}
+.extrasidebar{
+	float: right;
+	position: absolute;
+	overflow-y: hidden;
+	width: 15%;
+	height: 80%;
+	right: 0px;
+	top: 50px;
+/*	background-color: black;*/
+
+}
+
+.sidebarbutton{
+	position: absolute;
+	top: 600px;
+	
+}
+	
+
+.hidden {
+        display: none;
+}
+ 
+.visible {
+        display: block;
+   }
+	
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+	
+
+}
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    color: #fff;
+}
+
+.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 30px  minmax(500px, 1fr);
+		grid-template-rows: 50px minmax(500px, 1fr) 100px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #d8d8d8;
+  color: #fff;
+  font-size: 140%;
+
+}
+
+.header {
+  background-color: #d8d8d8;
+	height: 100%;
+/*	background-color: rgba(239, 105, 146, 0.6);*/
+}
+
+
+.alert-close {
+	background: rgba(239, 105, 146, 0.6);
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px;
+	position: absolute;
+	right: 11px;
+	text-align: center;
+	top: 9px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	transition: color 0.2s ease-in-out;
+	box-shadow: inset 0 1px 2px rgba(239, 105, 146, 0.6),inset 0 -1px 2px rgba(255,255,255,0.25);
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: inset 0 1px 2px rgba(239, 105, 146, 0.6),inset 0 -1px 2px rgba(255,255,255,0.5);
+	-webkit-transition: color 0.2s ease-in-out;
+}
+
+.dropbtn {
+/*    background-color: #ef6992;*/
+	background-color: rgba(239, 105, 146, 0.8);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+	cursor: pointer;
+}
+
+/* needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ef6992;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: white;
+	-webkit-transition: 0.6s ease-in-out;
+	transition: 0.6s ease-in-out;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #ef6992;
+	transition: 0.6s ease-in-out;
+	
+}
+
+.logoimg{
+	height: 60px;
+	width:auto;
+}
